@@ -9,11 +9,16 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
+    lateinit var diceImage: ImageView
+    lateinit var rollButton: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val rollButton: Button = findViewById(R.id.roll_button)
+        diceImage = findViewById(R.id.dice_image)
+        rollButton = findViewById(R.id.roll_button)
+
         //rollButton.text = "Let's Roll"
         rollButton.setOnClickListener {
             //Toast.makeText(this, "ButtonClicked", Toast.LENGTH_SHORT).show()
@@ -40,7 +45,6 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        val diceImage: ImageView = findViewById(R.id.dice_image)
         diceImage.setImageResource(drawableResource)
 
 
